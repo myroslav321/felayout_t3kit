@@ -31,8 +31,8 @@
     z-index: 0;
     top: 0;
     left: 0;
-    background: -webkit-linear-gradient(to bottom, rgba(40, 143, 180, 0) 0%, rgba(40, 143, 180, 0.8) 75%);
-    background: linear-gradient(to bottom, rgba(40, 143, 180, 0) 0%, rgba(40, 143, 180, 0.8) 75%);
+    background: -webkit-linear-gradient(to bottom, fade(@main-color, 0%) 0%, fade(@main-color, 80%) 75%);
+    background: linear-gradient(to bottom, fade(@main-color, 0%) 0%, fade(@main-color, 80%) 75%);
     transition: all .2s;
     opacity: 0;
     -webkit-transform: translate3d(0, 80%, 0);
@@ -73,13 +73,13 @@
 .img-text-link._hover-1:hover .img-text-link__header{
     -webkit-transform: translate3d(0, -90%, 0);
     transform: translate3d(0, -90%, 0);
-    color: #fff;
+    color: @main-body-bg;
 }
 .img-text-link._hover-1:hover .img-text-link__p{
     -webkit-transform: translate3d(0, -20%, 0);
     transform: translate3d(0, -20%, 0);
     opacity: 1;
-    color: #fff;
+    color: @main-body-bg;
 }
 .img-text-link._hover-1:hover .img-text-link__img-link:after{
     -webkit-transform: translate3d(0, 0, 0);
@@ -92,7 +92,7 @@
 .img-text-link._hover-2{
     position: relative;
     overflow: hidden;
-    color: #fff;
+    color: @main-body-bg;
 }
 .img-text-link._hover-2 .img-text-link__img-link{
     z-index: 2;
@@ -145,7 +145,7 @@
 .img-text-link._hover-2:hover .img-text-link__p{
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
-    color: #fff;
+    color: @main-body-bg;
 }
 
 //=========================================== _hover-3
@@ -161,7 +161,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(40, 143, 180, 0.2);
+        background: fade(@main-color, 20%);
         display: block;
         z-index: 1;
     }
@@ -180,14 +180,12 @@
         z-index: 3;
     }
 }
-
 .img-text-link._hover-3 .img-text-link__img-link{
     display: block;
     transition: all .3s ease;
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
 }
-
 .img-text-link._hover-3 .img-text-link__header{
     position: absolute;
     top: 0;
@@ -202,7 +200,7 @@
     padding: 5px 15px 5px 50px;
     text-align: right;
     transition: all .4s ease;
-    border-right: 3px solid #fff;
+    border-right: 3px solid @main-body-bg;
     margin: 15px;
     opacity: 0;
     z-index: 3;
@@ -224,7 +222,7 @@
     transform: translate3d(-150%, 0, 0) skew(45deg);
 }
 .img-text-link._hover-3:hover:before{
-    background: rgba(40, 143, 180, 0.4);
+    background: ade(@main-color, 40%);
 }
 .img-text-link._hover-3:hover .img-text-link__img-link{
     -webkit-transform: scale(1);
