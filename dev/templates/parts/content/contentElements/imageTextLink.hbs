@@ -1,4 +1,4 @@
-<div class="img-text-link {{#if this.addHover}}_hover{{/if}}">
+<div class="img-text-link {{#if this.hoverClass}}{{this.hoverClass}}{{/if}}">
     {{#if this.imgSrc}}
         {{#if this.imgLink}}
             <a class="img-text-link__img-link" title="{{imgLink}}" href="{{imgLink}}">
@@ -12,7 +12,7 @@
         <h3 class="img-text-link__header">{{header}}</h3>
     {{/if}}
     {{#if this.text}}
-        <p class="img-text-link__p">{{text}}</p>
+        <p class="img-text-link__p {{#if this.hoverClass}}js__img-text-link{{/if}}">{{text}}</p>
     {{/if}}
     {{#if this.linkName}}
         <a class="img-text-link__link {{#if this.linkAsBtn}}btn btn-default {{/if}}" title="{{linkName}}" href="{{#if this.link}}{{link}}{{else}}#{{/if}}">{{linkName}}</a>
