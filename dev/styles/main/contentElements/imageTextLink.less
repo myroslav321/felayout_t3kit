@@ -22,6 +22,9 @@
     position: relative;
     display: block;
 }
+.img-text-link._hover-1 .img-text-link__img-link:before{
+    display: none;
+}
 .img-text-link._hover-1 .img-text-link__img-link:after{
     content:'';
     display: block;
@@ -31,6 +34,8 @@
     z-index: 0;
     top: 0;
     left: 0;
+    opacity: 1;
+    visibility: visible;
     background: -webkit-linear-gradient(to bottom, fade(@main-color, 0%) 0%, fade(@main-color, 80%) 75%);
     background: linear-gradient(to bottom, fade(@main-color, 0%) 0%, fade(@main-color, 80%) 75%);
     transition: all .2s;
@@ -51,6 +56,7 @@
     width: 100%;
     padding: 15px;
     margin: 0;
+    z-index: 1;
     transition: all .4s;
     -webkit-transform: translate3d(0, -90%, 0);
     transform: translate3d(0, -90%, 0);
@@ -69,6 +75,7 @@
     bottom: 0;
     color: @main-body-bg;
     text-align: center;
+    z-index: 1;
     -webkit-transform: translate3d(0, -20%, 0);
     transform: translate3d(0, -20%, 0);
 }
@@ -107,12 +114,12 @@
     opacity: 1;
 }
 
+
 //=========================================== _hover-2
 
 .img-text-link._hover-2{
     position: relative;
     overflow: hidden;
-    color: @main-body-bg;
 }
 .img-text-link._hover-2 .img-text-link__img-link{
     z-index: 2;
@@ -134,7 +141,9 @@
     bottom: 0;
     padding: 15px;
     z-index: 3;
+    width: 100%;
     transition: all .4s;
+    color: @main-body-bg;
     border-bottom: 2px solid @main-color;
     -webkit-transform: translate3d(0, -50px, 0);
     transform: translate3d(0, -50px, 0);
@@ -194,7 +203,6 @@
 .img-text-link._hover-3{
     position: relative;
     overflow: hidden;
-    color: #fff;
     &:before{
         content:'';
         position: absolute;
@@ -204,7 +212,8 @@
         height: 100%;
         background: fade(@main-color, 40%);
         display: block;
-        z-index: 1;
+        transition: all .5s;
+        z-index: 2;
     }
     &:after{
         content:'';
@@ -229,6 +238,9 @@
         display: block;
     }
 }
+.img-text-link._hover-3 .img-text-link__img-link:before{
+    display: none;
+}
 .img-text-link._hover-3 .img-text-link__img-link{
     display: block;
     transition: all .3s ease;
@@ -246,15 +258,19 @@
     padding: 15px 50px 15px 15px;
     width: 100%;
     z-index: 3;
+    color: @main-body-bg;
 }
 .img-text-link._hover-3 .img-text-link__p{
     position: absolute;
     bottom: 0;
+    color: @main-body-bg;
     padding: 5px 15px 5px 50px;
     text-align: right;
     transition: all .4s ease;
     border-right: 3px solid @main-body-bg;
-    margin: 15px;
+    margin: 15px 0;
+    width: 100%;
+    right: 15px;
     z-index: 3;
 }
 @media(min-width: 992px){
@@ -279,7 +295,7 @@
     transform: translate3d(-150%, 0, 0) skew(45deg);
 }
 .img-text-link._hover-3:hover:before{
-    background: ade(@main-color, 40%);
+    background: fade(@main-color, 40%);
 }
 .img-text-link._hover-3:hover .img-text-link__img-link{
     -webkit-transform: scale(1);
