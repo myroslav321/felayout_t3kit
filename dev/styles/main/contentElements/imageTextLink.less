@@ -151,8 +151,8 @@
     transition: all .4s;
     color: @main-body-bg;
     border-bottom: 2px solid @main-color;
-    -webkit-transform: translate3d(0, -50px, 0);
-    transform: translate3d(0, -50px, 0);
+    -webkit-transform: translate3d(0, -70px, 0);
+    transform: translate3d(0, -70px, 0);
 }
 @media(min-width: 992px){
     .img-text-link._hover-2 .img-text-link__header{
@@ -165,7 +165,7 @@
     background: @main-color;
     color: @main-body-bg;
     bottom: 0;
-    padding: 5px 15px;
+    padding: 15px;
     margin: 0;
     transition: all .4s;
     -webkit-transform-origin: 0% 100%;
@@ -191,12 +191,12 @@
     display: block;
 }
 .img-text-link._hover-2:hover .img-text-link__img-link{
-    -webkit-transform: translate3d(0, -50px, 0);
-    transform: translate3d(0, -50px, 0);
+    -webkit-transform: translate3d(0, -70px, 0);
+    transform: translate3d(0, -70px, 0);
 }
 .img-text-link._hover-2:hover .img-text-link__header{
-    -webkit-transform: translate3d(0, -50px, 0);
-    transform: translate3d(0, -50px, 0);
+    -webkit-transform: translate3d(0, -70px, 0);
+    transform: translate3d(0, -70px, 0);
 }
 .img-text-link._hover-2:hover .img-text-link__p{
     -webkit-transform: scaleY(1);
@@ -362,14 +362,14 @@
     padding: 15px;
     margin: 0;
     transition: all .4s;
-    -webkit-transform: translate3d(0, -90%, 0);
-    transform: translate3d(0, -90%, 0);
+    -webkit-transform: translate3d(0, -70%, 0);
+    transform: translate3d(0, -70%, 0);
 }
 @media(min-width: 992px){
     .img-text-link._hover-4 .img-text-link__header{
         color: @main-body-bg;
-        -webkit-transform: translate3d(0, -50%, 0);
-        transform: translate3d(0, -50%, 0);
+        -webkit-transform: translate3d(0, -60%, 0);
+        transform: translate3d(0, -60%, 0);
     }
 }
 .img-text-link._hover-4 .img-text-link__p{
@@ -377,10 +377,9 @@
     padding: 0 30px;
     transition: all .4s ease;
     bottom: 0;
-    color: @main-color;
     text-align: center;
-    -webkit-transform: translate3d(0, -20%, 0);
-    transform: translate3d(0, -20%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
 }
 @media(min-width: 992px){
     .img-text-link._hover-4 .img-text-link__p{
@@ -401,8 +400,8 @@
     font-size: 0;
 }
 .img-text-link._hover-4:hover .img-text-link__header{
-    -webkit-transform: translate3d(0, -60%, 0);
-    transform: translate3d(0, -60%, 0);
+    -webkit-transform: translate3d(0, -70%, 0);
+    transform: translate3d(0, -70%, 0);
     color: @main-text-color;
 }
 .img-text-link._hover-4:hover .img-text-link__p{
@@ -581,26 +580,32 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    padding: 15px 30px;
-    top: 0;
+    padding: 0 30px;
+    margin: 0;
+    top: 50%;
     color: @main-body-bg;
     z-index: 2;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
 }
 .img-text-link._hover-6 .img-text-link__p{
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 50%;
     text-align: center;
-    padding: 10px 30px 20px 30px;
+    padding: 15px 30px;
+    margin: 0;
     color: @main-body-bg;
     z-index: 2;
     transition: all .3s ease;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
 }
 @media(min-width: 992px){
     .img-text-link._hover-6 .img-text-link__p{
         opacity: 0;
-        -webkit-transform: scale(.9);
-        transform: scale(.9);
+        -webkit-transform: translate3d(0, 100%, 0) scale(.9);
+        transform: translate3d(0, 100%, 0) scale(.9);
     }
 }
 .img-text-link._hover-6 .img-text-link__link{
@@ -631,8 +636,8 @@
 }
 .img-text-link._hover-6:hover .img-text-link__p{
     opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: translate3d(0, 100%, 0) scale(1);
+    transform: translate3d(0, 100%, 0) scale(1);
 }
 
 
@@ -659,7 +664,7 @@
         right: 15px;
         width: auto;
         transition: all .3s ease;
-        background: fade(@main-color, 30%);
+        background: fade(@main-color, 50%);
         border: 2px solid @main-body-bg;
         box-shadow: 0 0 0 50px fade(tint(@main-text-color, 90%), 50%);
     }
@@ -840,7 +845,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: fade(@main-color, 40%);
+        background: fade(@main-color, 30%);
         z-index: 1;
     }
     &:after{
