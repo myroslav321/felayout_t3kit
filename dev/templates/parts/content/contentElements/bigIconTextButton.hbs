@@ -1,4 +1,15 @@
-<div class="big-icon-text-btn{{#if this.wholeAreaLink}} _whole-area-link{{/if}}">
+{{!-- bigIconTextSettings settings:
+        disableWholeAreaLink = true/false (by deafalt false);
+        btnAsLink = true/false (by deafalt false, doesn't effect if disableWholeAreaLink set to false);
+        buttonLink = "" (set href to the element);
+        header = "" (set element heading);
+        text = "" (set text content to element);
+        buttonName = "" (set button or link name);
+        bigTopIcon = "" (set class name to element icon);
+--}}
+
+
+<div class="big-icon-text-btn{{#if this.disableWholeAreaLink}}{{else}} _whole-area-link{{/if}}">
     {{#if this.bigTopIcon}}
         <span class="big-icon-text-btn__icon icons icon-{{bigTopIcon}}"></span>
     {{/if}}
@@ -11,7 +22,7 @@
     {{#if this.buttonName}}
         <a class="big-icon-text-btn__link {{#if this.btnAsLink}}{{else}}btn btn-default {{/if}}" title="{{buttonName}}" href="{{#if this.buttonLink}}{{buttonLink}}{{else}}#{{/if}}">{{buttonName}}</a>
     {{/if}}
-    {{#if this.wholeAreaLink}}
-        <a class="big-icon-text-btn__whole-area-link" title="{{buttonName}}" href="{{#if this.wholeAreaLink}}{{wholeAreaLink}}{{else}}#{{/if}}">{{buttonName}}</a>
+    {{#if this.disableWholeAreaLink}}{{else}}
+        <span class="big-icon-text-btn__sham-link btn btn-default">{{buttonName}}</span>
     {{/if}}
 </div>
