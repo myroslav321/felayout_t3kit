@@ -3,6 +3,7 @@
 // =========================================================
 .img-text-link {
     margin: 40px 0;
+    position: relative;
 }
 .img-text-link__img-link {
 	position: relative;
@@ -13,17 +14,27 @@
 	position: relative;
 	z-index: 1;
 }
-.img-text-link__whole-area-link {
+.img-text-link._whole-area-link .img-text-link__link {
 	position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     font-size: 0;
+    background: transparent;
+    border: none;
     text-indent: -9999px;
-    z-index: 0;
 }
-.img-text-link._whole-area-link:hover .img-text-link__whole-area-link {
+.img-text-link__sham-link{
+    position: relative;
+    z-index: 2;
+    color: @link-color;
+    cursor: pointer;
+}
+.img-text-link__sham-link:hover{
+    color: @link-hover-color;
+}
+.img-text-link._whole-area-link:hover .img-text-link__link {
     background-color: fade(#fff, 10%);
 }
 // =========================================================
