@@ -17,19 +17,23 @@
 }
 .icon-text-btn__link {
 	position: relative;
-    z-index: 1;
 }
-.icon-text-btn__whole-area-link {
+.icon-text-btn._whole-area-link .icon-text-btn__link{
 	position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     font-size: 0;
+    background: transparent;
+    border: none;
     text-indent: -9999px;
-    z-index: 0;
 }
-.icon-text-btn._whole-area-link:hover .icon-text-btn__whole-area-link {
+.icon-text-btn__sham-link{
+    position: relative;
+    z-index: 2;
+}
+.icon-text-btn._whole-area-link:hover .icon-text-btn__link {
     background-color: fade(#fff, 10%);
 }
 // =========================================================
