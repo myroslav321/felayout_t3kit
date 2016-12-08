@@ -1,6 +1,10 @@
 // =========================================================
 // === Icon text btn ======================================+
 // =========================================================
+.icon-text-btn__wrp{
+    position: relative;
+    overflow: auto;
+}
 .icon-text-btn {
     margin: 40px 0;
 }
@@ -30,8 +34,10 @@
     text-indent: -9999px;
 }
 .icon-text-btn__sham-link{
-    position: relative;
-    z-index: 2;
+    color: @main-link-color;
+}
+.icon-text-btn__sham-link.btn{
+    color: @main-text-color;
 }
 .icon-text-btn._whole-area-link:hover .icon-text-btn__link {
     background-color: fade(#fff, 10%);
