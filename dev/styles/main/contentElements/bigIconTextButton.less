@@ -1,6 +1,10 @@
 // =========================================================
 // === Big icon text btn ===================================
 // =========================================================
+.big-icon-text-btn__wrp{
+    position: relative;
+    overflow: auto;
+}
 .big-icon-text-btn {
     margin: 40px 0;
     text-align: center;
@@ -34,8 +38,10 @@
     border: none;
 }
 .big-icon-text-btn__sham-link{
-    position: relative;
-    z-index: 2;
+    color: @main-link-color;
+}
+.big-icon-text-btn__sham-link.btn{
+    color: @main-text-color;
 }
 .big-icon-text-btn._whole-area-link:hover .big-icon-text-btn__link {
     background-color: fade(#fff, 10%);
