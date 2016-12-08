@@ -1,6 +1,10 @@
 // =========================================================
 // === Image text link =====================================
 // =========================================================
+.img-text-link__wrp{
+    position: relative;
+    overflow: auto;
+}
 .img-text-link {
     margin: 40px 0;
 }
@@ -25,13 +29,10 @@
     text-indent: -9999px;
 }
 .img-text-link__sham-link{
-    position: relative;
-    z-index: 2;
-    color: @link-color;
-    cursor: pointer;
+    color: @main-link-color;
 }
-.img-text-link__sham-link:hover{
-    color: @link-hover-color;
+.img-text-link__sham-link.btn{
+    color: @main-text-color;
 }
 .img-text-link._whole-area-link:hover .img-text-link__link {
     background-color: fade(#fff, 10%);
