@@ -3,7 +3,7 @@
 
     // document load event
     $(document).ready(function() {
-        var $frame = $('.js__frame-animated');
+        var $frame = $('.js__hero-image');
         var $slider = $('.slider-container');
         $frame.each(function(i){
             var self = $(this);
