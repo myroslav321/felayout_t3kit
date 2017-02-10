@@ -7,7 +7,7 @@
         var $slider = $('.slider-container');
         $frame.each(function(i){
             var self = $(this);
-                if(self.context.offsetParent.nodeName == 'BODY'){
+                if(!self.parents('.swiper-wrapper').length){
                 self.addClass('_animated');
             }
         });
